@@ -1,0 +1,34 @@
+<root>
+<!--only service contract no data contract-->
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+<s:Header>
+<a:Action s:mustUnderstand="1">http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGig</a:Action>
+<a:MessageID>urn:uuid:3e46aead-5b18-4825-b062-b4a891e9da62</a:MessageID>
+<a:ReplyTo>
+<a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+</a:ReplyTo>
+<a:To s:mustUnderstand="1">net.tcp://localhost:9000/GigManagerService</a:To>
+</s:Header>
+<s:Body>
+<SaveGig xmlns="http://www.thatindigogirl.com/samples/2006/06">
+<item xmlns:b="http://schemas.datacontract.org/2004/07/ContentTypes" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+<b:DateEnd>0001-01-01T00:00:00</b:DateEnd>
+<b:DateStart>0001-01-01T00:00:00</b:DateStart>
+<b:Description>Join the band for a rockin' party to celebrate our second CD release!</b:Description>
+<b:Id>0</b:Id>
+<b:Title>Join the band for a rockin' party to celebrate our second CD release!</b:Title>
+<b:Url i:nil="true"></b:Url>
+</item>
+</SaveGig>
+</s:Body>
+</s:Envelope>
+
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+<s:Header>
+<a:Action s:mustUnderstand="1">http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGigResponse</a:Action>
+</s:Header>
+<s:Body>
+<SaveGigResponse xmlns="http://www.thatindigogirl.com/samples/2006/06"></SaveGigResponse>
+</s:Body>
+</s:Envelope>
+</root>
