@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Host.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="baseTcpAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">net.tcp://localhost:9000/EventsService</Value>
+    </Setting>
+    <Setting Name="baseHttpAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8000/EventsService</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

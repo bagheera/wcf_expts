@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://www.thatindigogirl.com/samples/2006/06" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://www.thatindigogirl.com/samples/2006/06" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.thatindigogirl.com/samples/2006/06/Imports">
+      <xsd:import schemaLocation="http://localhost:8000/?xsd=xsd0" namespace="http://www.thatindigogirl.com/samples/2006/06" />
+      <xsd:import schemaLocation="http://localhost:8000/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8000/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ContentTypes" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GigManagerServiceContract_SaveGig_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveGig" />
+  </wsdl:message>
+  <wsdl:message name="GigManagerServiceContract_SaveGig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveGigResponse" />
+  </wsdl:message>
+  <wsdl:message name="GigManagerServiceContract_GetGig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGig" />
+  </wsdl:message>
+  <wsdl:message name="GigManagerServiceContract_GetGig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGigResponse" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="GigManagerServiceContract">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SaveGig">
+      <wsdl:input wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGig" message="tns:GigManagerServiceContract_SaveGig_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGigResponse" message="tns:GigManagerServiceContract_SaveGig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetGig">
+      <wsdl:input wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/GetGig" message="tns:GigManagerServiceContract_GetGig_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/GetGigResponse" message="tns:GigManagerServiceContract_GetGig_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
