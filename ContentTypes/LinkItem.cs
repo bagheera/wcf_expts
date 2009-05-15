@@ -4,18 +4,25 @@
 // Michele's Blog: www.dasblonde.net
 // IDesign: www.idesign.net
 using System;
+using System.Runtime.Serialization;
 
 namespace ContentTypes
 {
-    
+    [DataContract]
     public class LinkItem
     {
 
+        [DataMember]
         private long m_id;
+        [DataMember]
         private string m_title;
+        [DataMember]
         private string m_description;
+        [DataMember]
         private DateTime m_dateStart;
+        [DataMember]
         private DateTime m_dateEnd;
+        [DataMember]
         private string m_url;
 
         public DateTime DateStart

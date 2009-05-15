@@ -1,9 +1,9 @@
 <root>
-<!--only service contract no data contract-->
+<!--added data contract to server but did not update svc ref on client-->
 <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
 <s:Header>
 <a:Action s:mustUnderstand="1">http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGig</a:Action>
-<a:MessageID>urn:uuid:aa908ade-92ed-48a6-8038-41a064fdb67d</a:MessageID>
+<a:MessageID>urn:uuid:78aa637d-6a80-4f96-bb94-d70926b202b9</a:MessageID>
 <a:ReplyTo>
 <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
 </a:ReplyTo>
@@ -31,4 +31,11 @@
 <SaveGigResponse xmlns="http://www.thatindigogirl.com/samples/2006/06"></SaveGigResponse>
 </s:Body>
 </s:Envelope>
+<!--
+SaveGig called with title=
+desc=
+url=
+start=01/01/01 12:00:00 AM
+end=01/01/01 12:00:00 AM
+-->
 </root>
