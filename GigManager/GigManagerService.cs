@@ -34,7 +34,7 @@ namespace GigManager
 
         public void SaveGig(LinkItem item)
         {
-            Console.WriteLine("SaveGig called with "+ item.Description);
+            Console.WriteLine("SaveGig called with "+ item);
             m_linkItem = item;
         }
 

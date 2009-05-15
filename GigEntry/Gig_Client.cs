@@ -18,9 +18,16 @@ namespace GigEntry
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GigInfoForm());
+            gig.GigManagerServiceContractClient client;
+                        client = new gig.GigManagerServiceContractClient();
+            gig.LinkItem item = new gig.LinkItem();
+            item.Description = "some desc";
+            item.Title = "some boring event";
+            item.Url = "http://askfdj.com";
+            item.DateStart = new DateTime(2009, 10, 31, 22, 30, 0);
+            item.DateEnd = new DateTime(2009, 11, 01, 5, 30, 0);
+            client.SaveGig(item);
+
         }
     }
 }

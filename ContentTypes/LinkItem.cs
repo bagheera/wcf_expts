@@ -53,5 +53,10 @@ namespace ContentTypes
             get { return m_description; }
             set { m_description = value; }
         }
+
+        public override string ToString()
+        {
+            return "title=" + Title + "\ndesc=" + Description + "\nurl=" + Url + "\nstart=" + DateStart + "\nend=" + DateEnd;
+        }
     }
 }

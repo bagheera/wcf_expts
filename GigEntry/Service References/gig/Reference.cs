@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GigEntry.localhost {
+namespace GigEntry.gig {
     using System.Runtime.Serialization;
     using System;
     
@@ -139,25 +139,25 @@ namespace GigEntry.localhost {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://www.thatindigogirl.com/samples/2006/06", ConfigurationName="localhost.GigManagerServiceContract", SessionMode=System.ServiceModel.SessionMode.Required)]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://www.thatindigogirl.com/samples/2006/06", ConfigurationName="gig.GigManagerServiceContract", SessionMode=System.ServiceModel.SessionMode.Required)]
     public interface GigManagerServiceContract {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGig", ReplyAction="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGigRe" +
             "sponse")]
-        void SaveGig(GigEntry.localhost.LinkItem item);
+        void SaveGig(GigEntry.gig.LinkItem item);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/GetGig", ReplyAction="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/GetGigRes" +
             "ponse")]
-        GigEntry.localhost.LinkItem GetGig();
+        GigEntry.gig.LinkItem GetGig();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    public interface GigManagerServiceContractChannel : GigEntry.localhost.GigManagerServiceContract, System.ServiceModel.IClientChannel {
+    public interface GigManagerServiceContractChannel : GigEntry.gig.GigManagerServiceContract, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    public partial class GigManagerServiceContractClient : System.ServiceModel.ClientBase<GigEntry.localhost.GigManagerServiceContract>, GigEntry.localhost.GigManagerServiceContract {
+    public partial class GigManagerServiceContractClient : System.ServiceModel.ClientBase<GigEntry.gig.GigManagerServiceContract>, GigEntry.gig.GigManagerServiceContract {
         
         public GigManagerServiceContractClient() {
         }
@@ -178,11 +178,11 @@ namespace GigEntry.localhost {
                 base(binding, remoteAddress) {
         }
         
-        public void SaveGig(GigEntry.localhost.LinkItem item) {
+        public void SaveGig(GigEntry.gig.LinkItem item) {
             base.Channel.SaveGig(item);
         }
         
-        public GigEntry.localhost.LinkItem GetGig() {
+        public GigEntry.gig.LinkItem GetGig() {
             return base.Channel.GetGig();
         }
     }
