@@ -18,6 +18,7 @@ namespace ContentTypes
         private DateTime m_dateStart;
         private DateTime m_dateEnd;
         private string m_url;
+        private string m_venue;
 
         [DataMember]
         public DateTime DateStart
@@ -60,10 +61,15 @@ namespace ContentTypes
             get { return m_description; }
             set { m_description = value; }
         }
-
+        [DataMember]
+        public string Place //Venue won't disturb alphabetical order, hence Place
+        {
+            get { return m_venue; }
+            set { m_venue = value; }
+        }
         public override string ToString()
         {
-            return "title=" + Title + "\ndesc=" + Description + "\nurl=" + Url + "\nstart=" + DateStart + "\nend=" + DateEnd;
+            return "title=" + Title + "\ndesc=" + Description + "\nurl=" + Url + "\nstart=" + DateStart + "\nend=" + DateEnd + "\nvenue=" + Place;
         }
     }
 }
