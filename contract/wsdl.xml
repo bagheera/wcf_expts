@@ -1,1 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?><wsdl:definitions name="GigManagerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://www.thatindigogirl.com/samples/2006/06" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex"><wsp:Policy wsu:Id="NetTcpBinding_GigManagerServiceContract_policy"><wsp:ExactlyOne><wsp:All><msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1"/><sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:TransportToken><wsp:Policy><msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy"><msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel></msf:WindowsTransportSecurity></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout></wsp:Policy></sp:TransportBinding><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy><wsdl:import namespace="http://www.thatindigogirl.com/samples/2006/06" location="http://localhost:8000/?wsdl=wsdl0"/><wsdl:types/><wsdl:binding name="NetTcpBinding_GigManagerServiceContract" type="i0:GigManagerServiceContract"><wsp:PolicyReference URI="#NetTcpBinding_GigManagerServiceContract_policy"/><soap12:binding transport="http://schemas.microsoft.com/soap/tcp"/><wsdl:operation name="SaveGig"><soap12:operation soapAction="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGig" style="document"/><wsdl:input><soap12:body use="literal"/></wsdl:input><wsdl:output><soap12:body use="literal"/></wsdl:output></wsdl:operation><wsdl:operation name="GetGig"><soap12:operation soapAction="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/GetGig" style="document"/><wsdl:input><soap12:body use="literal"/></wsdl:input><wsdl:output><soap12:body use="literal"/></wsdl:output></wsdl:operation></wsdl:binding><wsdl:service name="GigManagerService"><wsdl:port name="NetTcpBinding_GigManagerServiceContract" binding="tns:NetTcpBinding_GigManagerServiceContract"><soap12:address location="net.tcp://localhost:9000/GigManagerService"/><wsa10:EndpointReference><wsa10:Address>net.tcp://localhost:9000/GigManagerService</wsa10:Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Upn>srinaray@corporate.thoughtworks.com</Upn></Identity></wsa10:EndpointReference></wsdl:port></wsdl:service></wsdl:definitions>
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="GigManagerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://www.thatindigogirl.com/samples/2006/06" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+<wsp:Policy wsu:Id="NetTcpBinding_GigManagerServiceContract_policy">
+<wsp:ExactlyOne>
+<wsp:All>
+<msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1"/>
+<sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+<wsp:Policy>
+<sp:TransportToken>
+<wsp:Policy>
+<msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+<msf:ProtectionLevel>
+EncryptAndSign</msf:ProtectionLevel>
+</msf:WindowsTransportSecurity>
+</wsp:Policy>
+</sp:TransportToken>
+<sp:AlgorithmSuite>
+<wsp:Policy>
+<sp:Basic256/>
+</wsp:Policy>
+</sp:AlgorithmSuite>
+<sp:Layout>
+<wsp:Policy>
+<sp:Strict/>
+</wsp:Policy>
+</sp:Layout>
+</wsp:Policy>
+</sp:TransportBinding>
+<wsaw:UsingAddressing/>
+</wsp:All>
+</wsp:ExactlyOne>
+</wsp:Policy>
+<wsdl:import namespace="http://www.thatindigogirl.com/samples/2006/06" location="http://localhost:8000/?wsdl=wsdl0"/>
+<wsdl:types/>
+<wsdl:binding name="NetTcpBinding_GigManagerServiceContract" type="i0:GigManagerServiceContract">
+<wsp:PolicyReference URI="#NetTcpBinding_GigManagerServiceContract_policy"/>
+<soap12:binding transport="http://schemas.microsoft.com/soap/tcp"/>
+<wsdl:operation name="SaveGig">
+<soap12:operation soapAction="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGig" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetGig">
+<soap12:operation soapAction="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/GetGig" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="GigManagerService">
+<wsdl:port name="NetTcpBinding_GigManagerServiceContract" binding="tns:NetTcpBinding_GigManagerServiceContract">
+<soap12:address location="net.tcp://localhost:9000/GigManagerService"/>
+<wsa10:EndpointReference>
+<wsa10:Address>
+net.tcp://localhost:9000/GigManagerService</wsa10:Address>
+<Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+<Upn>
+srinaray@corporate.thoughtworks.com</Upn>
+</Identity>
+</wsa10:EndpointReference>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>
