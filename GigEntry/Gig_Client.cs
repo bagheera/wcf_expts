@@ -20,11 +20,11 @@ namespace GigEntry
             gig.GigManagerServiceContractClient client;
                         client = new gig.GigManagerServiceContractClient();
             gig.LinkItem item = new gig.LinkItem();
-            item.m_description = "some desc";
-            item.m_title = "some boring event";
-            item.m_url = "http://askfdj.com";
-            item.m_dateStart = new DateTime(2009, 10, 31, 22, 30, 0);
-            item.m_dateEnd = new DateTime(2009, 11, 01, 5, 30, 0);
+            item.Description = "some desc";
+            item.Title = "some boring event";
+            item.Url = "http://askfdj.com";
+            item.DateStart = new DateTime(2009, 10, 31, 22, 30, 0);
+            item.DateEnd = new DateTime(2009, 11, 01, 5, 30, 0);
             client.SaveGig(item);
 
         }

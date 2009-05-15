@@ -1,9 +1,9 @@
 <root>
-<!--added data contract to server and update svc ref on client-->
+<!--applied DataContract at accessor level-->
 <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
 <s:Header>
 <a:Action s:mustUnderstand="1">http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGig</a:Action>
-<a:MessageID>urn:uuid:51d5d209-6f86-48c3-befe-c88d6679165f</a:MessageID>
+<a:MessageID>urn:uuid:bc625ea5-8f25-4988-83a6-42177b9bb76c</a:MessageID>
 <a:ReplyTo>
 <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
 </a:ReplyTo>
@@ -12,12 +12,12 @@
 <s:Body>
 <SaveGig xmlns="http://www.thatindigogirl.com/samples/2006/06">
 <item xmlns:b="http://schemas.datacontract.org/2004/07/ContentTypes" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-<b:m_dateEnd>2009-11-01T05:30:00</b:m_dateEnd>
-<b:m_dateStart>2009-10-31T22:30:00</b:m_dateStart>
-<b:m_description>some desc</b:m_description>
-<b:m_id>0</b:m_id>
-<b:m_title>some boring event</b:m_title>
-<b:m_url>http://askfdj.com</b:m_url>
+<b:DateEnd>2009-11-01T05:30:00</b:DateEnd>
+<b:DateStart>2009-10-31T22:30:00</b:DateStart>
+<b:Description>some desc</b:Description>
+<b:Id>0</b:Id>
+<b:Title>some boring event</b:Title>
+<b:Url>http://askfdj.com</b:Url>
 </item>
 </SaveGig>
 </s:Body>

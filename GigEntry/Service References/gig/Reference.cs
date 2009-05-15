@@ -23,22 +23,22 @@ namespace GigEntry.gig {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime m_dateEndField;
+        private System.DateTime DateEndField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime m_dateStartField;
+        private System.DateTime DateStartField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string m_descriptionField;
+        private string DescriptionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private long m_idField;
+        private long IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string m_titleField;
+        private string TitleField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string m_urlField;
+        private string UrlField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -51,79 +51,79 @@ namespace GigEntry.gig {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime m_dateEnd {
+        public System.DateTime DateEnd {
             get {
-                return this.m_dateEndField;
+                return this.DateEndField;
             }
             set {
-                if ((this.m_dateEndField.Equals(value) != true)) {
-                    this.m_dateEndField = value;
-                    this.RaisePropertyChanged("m_dateEnd");
+                if ((this.DateEndField.Equals(value) != true)) {
+                    this.DateEndField = value;
+                    this.RaisePropertyChanged("DateEnd");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime m_dateStart {
+        public System.DateTime DateStart {
             get {
-                return this.m_dateStartField;
+                return this.DateStartField;
             }
             set {
-                if ((this.m_dateStartField.Equals(value) != true)) {
-                    this.m_dateStartField = value;
-                    this.RaisePropertyChanged("m_dateStart");
+                if ((this.DateStartField.Equals(value) != true)) {
+                    this.DateStartField = value;
+                    this.RaisePropertyChanged("DateStart");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string m_description {
+        public string Description {
             get {
-                return this.m_descriptionField;
+                return this.DescriptionField;
             }
             set {
-                if ((object.ReferenceEquals(this.m_descriptionField, value) != true)) {
-                    this.m_descriptionField = value;
-                    this.RaisePropertyChanged("m_description");
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public long m_id {
+        public long Id {
             get {
-                return this.m_idField;
+                return this.IdField;
             }
             set {
-                if ((this.m_idField.Equals(value) != true)) {
-                    this.m_idField = value;
-                    this.RaisePropertyChanged("m_id");
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string m_title {
+        public string Title {
             get {
-                return this.m_titleField;
+                return this.TitleField;
             }
             set {
-                if ((object.ReferenceEquals(this.m_titleField, value) != true)) {
-                    this.m_titleField = value;
-                    this.RaisePropertyChanged("m_title");
+                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
+                    this.TitleField = value;
+                    this.RaisePropertyChanged("Title");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string m_url {
+        public string Url {
             get {
-                return this.m_urlField;
+                return this.UrlField;
             }
             set {
-                if ((object.ReferenceEquals(this.m_urlField, value) != true)) {
-                    this.m_urlField = value;
-                    this.RaisePropertyChanged("m_url");
+                if ((object.ReferenceEquals(this.UrlField, value) != true)) {
+                    this.UrlField = value;
+                    this.RaisePropertyChanged("Url");
                 }
             }
         }

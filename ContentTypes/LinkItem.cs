@@ -12,49 +12,49 @@ namespace ContentTypes
     public class LinkItem
     {
 
-        [DataMember]
         private long m_id;
-        [DataMember]
         private string m_title;
-        [DataMember]
         private string m_description;
-        [DataMember]
         private DateTime m_dateStart;
-        [DataMember]
         private DateTime m_dateEnd;
-        [DataMember]
         private string m_url;
 
+        [DataMember]
         public DateTime DateStart
         {
             get { return m_dateStart; }
             set { m_dateStart = value; }
-        } 
+        }
 
+        [DataMember]
         public DateTime DateEnd
         {
             get { return m_dateEnd; }
             set { m_dateEnd = value; }
         }
-       
+
+        [DataMember]
         public string Url
         {
             get { return m_url; }
             set { m_url = value; }
         }
-        
+
+        [DataMember]
         public long Id
         {
             get { return m_id; }
             set { m_id = value; }
         }
 
+        [DataMember]
         public string Title
         {
             get { return m_title; }
             set { m_title = value; }
         }
 
+        [DataMember]
         public string Description
         {
             get { return m_description; }
