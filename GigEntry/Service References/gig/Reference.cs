@@ -15,7 +15,7 @@ namespace GigEntry.gig {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="LinkItem", Namespace="http://schemas.datacontract.org/2004/07/ContentTypes")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LinkItem", Namespace="wcf_expts")]
     [System.SerializableAttribute()]
     public partial class LinkItem : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         

@@ -8,7 +8,7 @@ using System.Runtime.Serialization;
 
 namespace ContentTypes
 {
-    [DataContract]
+    [DataContract (Namespace="wcf_expts")]
     public class LinkItem
     {
 

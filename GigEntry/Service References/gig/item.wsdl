@@ -4,7 +4,7 @@
     <xsd:schema targetNamespace="http://www.thatindigogirl.com/samples/2006/06/Imports">
       <xsd:import schemaLocation="http://localhost:8000/?xsd=xsd0" namespace="http://www.thatindigogirl.com/samples/2006/06" />
       <xsd:import schemaLocation="http://localhost:8000/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:8000/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ContentTypes" />
+      <xsd:import schemaLocation="http://localhost:8000/?xsd=xsd2" namespace="wcf_expts" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="GigManagerServiceContract_SaveGig_InputMessage">
