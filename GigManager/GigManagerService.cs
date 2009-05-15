@@ -14,7 +14,7 @@ namespace GigManager
     [ServiceContract(
         Name = "GigManagerServiceContract", 
         Namespace = "http://www.thatindigogirl.com/samples/2006/06", 
-        SessionMode = SessionMode.Required)]
+        SessionMode = SessionMode.NotAllowed)]
     public interface IGigManagerService
     {
         [OperationContract]
@@ -24,7 +24,7 @@ namespace GigManager
         LinkItem GetGig();
     }
 
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall)]
     public class GigManagerService : IGigManagerService
     {
 

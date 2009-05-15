@@ -35,6 +35,9 @@ namespace GigEntry.gig {
         private long IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PlaceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TitleField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -103,6 +106,19 @@ namespace GigEntry.gig {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Place {
+            get {
+                return this.PlaceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PlaceField, value) != true)) {
+                    this.PlaceField = value;
+                    this.RaisePropertyChanged("Place");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Title {
             get {
                 return this.TitleField;
@@ -139,7 +155,7 @@ namespace GigEntry.gig {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://www.thatindigogirl.com/samples/2006/06", ConfigurationName="gig.GigManagerServiceContract", SessionMode=System.ServiceModel.SessionMode.Required)]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://www.thatindigogirl.com/samples/2006/06", ConfigurationName="gig.GigManagerServiceContract", SessionMode=System.ServiceModel.SessionMode.NotAllowed)]
     public interface GigManagerServiceContract {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGig", ReplyAction="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGigRe" +

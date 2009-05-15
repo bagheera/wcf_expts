@@ -19,12 +19,12 @@
   <wsdl:message name="GigManagerServiceContract_GetGig_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetGigResponse" />
   </wsdl:message>
-  <wsdl:portType msc:usingSession="true" name="GigManagerServiceContract">
-    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SaveGig">
+  <wsdl:portType msc:usingSession="false" name="GigManagerServiceContract">
+    <wsdl:operation name="SaveGig">
       <wsdl:input wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGig" message="tns:GigManagerServiceContract_SaveGig_InputMessage" />
       <wsdl:output wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGigResponse" message="tns:GigManagerServiceContract_SaveGig_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetGig">
+    <wsdl:operation name="GetGig">
       <wsdl:input wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/GetGig" message="tns:GigManagerServiceContract_GetGig_InputMessage" />
       <wsdl:output wsaw:Action="http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/GetGigResponse" message="tns:GigManagerServiceContract_GetGig_OutputMessage" />
     </wsdl:operation>
