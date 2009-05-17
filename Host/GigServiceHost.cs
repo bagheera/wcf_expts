@@ -18,6 +18,7 @@ namespace Host
 
             using (ServiceHost host = new ServiceHost(typeof(GigManager.GigManagerService)))
             {
+                System.Net.ServicePointManager.Expect100Continue = false;
                 host.Open();
 
                 Console.WriteLine();

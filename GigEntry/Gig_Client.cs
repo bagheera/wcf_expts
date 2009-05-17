@@ -17,6 +17,7 @@ namespace GigEntry
         [STAThread]
         static void Main()
         {
+            System.Net.ServicePointManager.Expect100Continue = false;
             gig.GigManagerServiceContractClient client;
                         client = new gig.GigManagerServiceContractClient();
             gig.LinkItem item = new gig.LinkItem();

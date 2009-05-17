@@ -1,31 +1,39 @@
 <root>
-<!--added Venue(Place) but did not update client svc ref-->
-<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+<!--updated client svc ref, log after change to basic http binding, turn off expect 100-continue, explicitly said no streaming i.e. Buffered mode-->
+<HttpRequest xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+<Method>POST</Method>
+<QueryString></QueryString>
+<WebHeaders>
+<SOAPAction>"http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGig"</SOAPAction>
+<Connection>Keep-Alive</Connection>
+<Content-Length>485</Content-Length>
+<Content-Type>text/xml; charset=utf-8</Content-Type>
+<Host>localhost:8000</Host>
+</WebHeaders>
+</HttpRequest>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
 <s:Header>
-<a:Action s:mustUnderstand="1">http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGig</a:Action>
-<a:MessageID>urn:uuid:1a318a47-7883-4deb-a668-73a51f9e82c4</a:MessageID>
-<a:ReplyTo>
-<a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
-</a:ReplyTo>
-<a:To s:mustUnderstand="1">net.tcp://localhost:9000/GigManagerService</a:To>
+<To s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://localhost:8000/GigManagerService</To>
+<Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGig</Action>
 </s:Header>
 <s:Body>
 <SaveGig xmlns="http://www.thatindigogirl.com/samples/2006/06">
-<item xmlns:b="wcf_expts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-<b:DateEnd>2009-11-01T05:30:00</b:DateEnd>
-<b:DateStart>2009-10-31T22:30:00</b:DateStart>
-<b:Description>some desc</b:Description>
-<b:Id>0</b:Id>
-<b:Title>some boring event</b:Title>
-<b:Url>http://askfdj.com</b:Url>
+<item xmlns:a="wcf_expts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+<a:DateEnd>2009-11-01T05:30:00</a:DateEnd>
+<a:DateStart>2009-10-31T22:30:00</a:DateStart>
+<a:Description>some desc</a:Description>
+<a:Id>0</a:Id>
+<a:Place i:nil="true"></a:Place>
+<a:Title>some boring event</a:Title>
+<a:Url>http://askfdj.com</a:Url>
 </item>
 </SaveGig>
 </s:Body>
 </s:Envelope>
 
-<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
 <s:Header>
-<a:Action s:mustUnderstand="1">http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGigResponse</a:Action>
+<Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://www.thatindigogirl.com/samples/2006/06/GigManagerServiceContract/SaveGigResponse</Action>
 </s:Header>
 <s:Body>
 <SaveGigResponse xmlns="http://www.thatindigogirl.com/samples/2006/06"></SaveGigResponse>
